@@ -1,0 +1,27 @@
+metrics:
+  counters:
+    - name: events
+      help: test bibibi
+      perf_event_array: true
+      labels:
+        - name: lport
+          size: 2
+          decoders: 
+            - name: uint
+        - name: dport
+          size: 2
+          decoders: 
+            - name: uint 
+        - name: saddr_v4
+          size: 4
+          decoders:
+            - name: inet_ip
+        - name: daddr_v4
+          size: 4
+          decoders:
+            - name: inet_ip
+        - name: af
+          size: 2
+          decoders:
+            - name: uint
+        
